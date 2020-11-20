@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { fetchQuizQuestion } from './Api';
 import QuestionCards from './components/QuestionCards';
 import { QuestionState, Difficulty } from './Api'
+import './App.css'
 
 const Total_Numbers=10
 
@@ -53,7 +54,7 @@ function App() {
   }
   
   return (
-    <>
+    <div className='App'>
        
       <h1>React Quiz</h1>
       {gameOver || userAnswers.length===Total_Numbers ? (
@@ -79,7 +80,7 @@ function App() {
         </button>
         ) : null}
       
-      </>
+      </div>
   );
 }
 
